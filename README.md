@@ -1,1 +1,1 @@
-www.korhus.global
+korhus.global
