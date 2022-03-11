@@ -7,6 +7,32 @@
 		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<body oncontextmenu_fckprotectedatt="%20oncontextmenu%3D%22return%20false%22" onselectstart_fckprotectedatt="%20onselectstart%3D%22return%20false%22" ondragstart_fckprotectedatt="%20ondragstart%3D%22return%20false%22"></body>  <script type="text/javascript"> 
+
+//form tags to omit in NS6+: 
+var omitformtags=["input", "textarea", "select"] 
+
+omitformtags=omitformtags.join("|") 
+
+function disableselect(e){ 
+if (omitformtags.indexOf(e.target.tagName.toLowerCase())==-1) 
+return false 
+} 
+
+function reEnable(){ 
+return true 
+} 
+
+if (typeof document.onselectstart!="undefined") 
+document.onselectstart=new Function ("return false") 
+else{ 
+document.onmousedown=disableselect 
+document.onmouseup=reEnable 
+} 
+
+</script>  <body onkeydown_fckprotectedatt="%20onkeydown%3D%22return%20false%22">
+		
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
